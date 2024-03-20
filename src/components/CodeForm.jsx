@@ -62,6 +62,12 @@ const CodeForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(!output) {
+      setSubmitError({
+        msg: "Please run the code first",
+      });
+      return;
+    }
     if (username === "") {
       setSubmitError({
         msg: "Please enter a username",
@@ -81,6 +87,7 @@ const CodeForm = () => {
       language,
       stdin,
       code,
+      output
     };
     const url = import.meta.env.VITE_API_URL + "/snippets/create";
     try {
