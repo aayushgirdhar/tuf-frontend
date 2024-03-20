@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import Loader from "./Loader";
 import axios from "axios";
 import { formatDistanceToNow } from "date-fns";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 const CodeSubmissions = () => {
   const [snippets, setSnippets] = useState([]);
@@ -33,7 +31,7 @@ const CodeSubmissions = () => {
     return <p className="mt-5 text-xl">No submissions yet</p>;
   return (
     <div>
-      <table class="table-auto w-full my-6 ">
+      <table className="table-auto w-full my-6 ">
         <thead>
           <tr className="bg-neutral-100">
             <th className="px-4 py-2">Username</th>
